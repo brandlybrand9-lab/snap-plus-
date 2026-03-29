@@ -50,6 +50,7 @@ const translations = {
       desc: "Choisissez l'abonnement qui vous convient. Prix fixes, sans frais cachés.",
       popular: "Le plus populaire",
       month: "Mois",
+      currency: "DA",
       orderInsta: "Commander sur Insta",
       orderSnap: "Commander sur Snap",
       copied: "Message copié !",
@@ -118,6 +119,7 @@ const translations = {
       desc: "اختر الاشتراك الذي يناسبك. أسعار ثابتة، بدون رسوم خفية.",
       popular: "الأكثر شعبية",
       month: "شهر",
+      currency: "د.ج",
       orderInsta: "اطلب عبر إنستغرام",
       orderSnap: "اطلب عبر سناب شات",
       copied: "تم نسخ الرسالة!",
@@ -190,7 +192,7 @@ export default function App() {
       name: t.pricing.plans.p1.name,
       priceBaridi: "900",
       priceFlixy: "1 100",
-      duration: "DA",
+      duration: t.pricing.currency,
       features: [
         t.pricing.plans.p1.f1,
         t.pricing.plans.p1.f2,
@@ -204,7 +206,7 @@ export default function App() {
       name: t.pricing.plans.p2.name,
       priceBaridi: "2 200",
       priceFlixy: "2 500",
-      duration: "DA",
+      duration: t.pricing.currency,
       features: [
         t.pricing.plans.p2.f1,
         t.pricing.plans.p2.f2,
@@ -218,7 +220,7 @@ export default function App() {
       name: t.pricing.plans.p3.name,
       priceBaridi: "3 500",
       priceFlixy: "3 900",
-      duration: "DA",
+      duration: t.pricing.currency,
       features: [
         t.pricing.plans.p3.f1,
         t.pricing.plans.p3.f2,
@@ -232,7 +234,7 @@ export default function App() {
       name: t.pricing.plans.p4.name,
       priceBaridi: "4 500",
       priceFlixy: "5 000",
-      duration: "DA",
+      duration: t.pricing.currency,
       features: [
         t.pricing.plans.p4.f1,
         t.pricing.plans.p4.f2,
@@ -246,7 +248,7 @@ export default function App() {
       name: t.pricing.plans.p5.name,
       priceBaridi: "5 000",
       priceFlixy: "5 500",
-      duration: "DA",
+      duration: t.pricing.currency,
       features: [
         t.pricing.plans.p5.f1,
         t.pricing.plans.p5.f2,
@@ -260,7 +262,7 @@ export default function App() {
       name: t.pricing.plans.p6.name,
       priceBaridi: "6 000",
       priceFlixy: "6 600",
-      duration: "DA",
+      duration: t.pricing.currency,
       features: [
         t.pricing.plans.p6.f1,
         t.pricing.plans.p6.f2,
@@ -502,16 +504,16 @@ export default function App() {
                 
                 <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-xl border border-gray-100 dark:border-gray-700 transition-colors duration-300">
                   <div className="text-xs text-gray-500 dark:text-gray-400 mb-1 font-medium uppercase tracking-wider">BaridiMob / CCP</div>
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-3xl font-extrabold text-snap-pink-dark dark:text-snap-pink">{plan.priceBaridi}</span>
+                  <div className={`flex items-baseline gap-1 ${lang === 'ar' ? 'flex-row-reverse justify-end' : ''}`}>
+                    <span dir="ltr" className="text-3xl font-extrabold text-snap-pink-dark dark:text-snap-pink">{plan.priceBaridi}</span>
                     <span className="text-gray-500 dark:text-gray-400 font-medium">{plan.duration}</span>
                   </div>
                 </div>
 
                 <div className="bg-gray-50 dark:bg-gray-800 p-3 rounded-xl border border-gray-100 dark:border-gray-700 transition-colors duration-300">
                   <div className="text-xs text-gray-500 dark:text-gray-400 mb-1 font-medium uppercase tracking-wider">Flexy</div>
-                  <div className="flex items-baseline gap-1">
-                    <span className="text-2xl font-bold text-gray-700 dark:text-gray-300">{plan.priceFlixy}</span>
+                  <div className={`flex items-baseline gap-1 ${lang === 'ar' ? 'flex-row-reverse justify-end' : ''}`}>
+                    <span dir="ltr" className="text-2xl font-bold text-gray-700 dark:text-gray-300">{plan.priceFlixy}</span>
                     <span className="text-gray-500 dark:text-gray-400 font-medium">{plan.duration}</span>
                   </div>
                 </div>
