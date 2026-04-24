@@ -13,7 +13,6 @@ import {
   X,
   Instagram,
   Phone,
-  Heart,
   Sun,
   Moon,
   Globe
@@ -281,9 +280,8 @@ export default function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center gap-2">
-              <div className="bg-snap-pink p-2 rounded-xl relative">
-                <Ghost className="w-8 h-8 text-white" strokeWidth={2.5} />
-                <Heart className="absolute -top-1 -right-1 w-4 h-4 text-snap-pink-dark fill-snap-pink-dark transform rotate-12" />
+              <div className="relative">
+                <img src="/logo.png" alt="SnapPlus DZ Logo" className="w-10 h-10 object-contain rounded-xl drop-shadow-md" />
               </div>
               <span className="font-bold text-2xl tracking-tight">SnapPlus<span className="text-snap-pink drop-shadow-sm">DZ</span></span>
             </div>
@@ -408,11 +406,8 @@ export default function App() {
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-gray-900 rounded-b-3xl"></div>
               <div className="bg-gray-900 rounded-2xl p-6 h-[450px] flex flex-col items-center justify-center text-center space-y-6 relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-snap-pink/20 to-transparent"></div>
-                <div className="bg-snap-pink p-4 rounded-2xl relative z-10 shadow-xl shadow-snap-pink-dark/20">
-                  <div className="relative">
-                    <Ghost className="w-16 h-16 text-white" strokeWidth={2} />
-                    <Heart className={`absolute -top-1 ${lang === 'ar' ? '-left-2' : '-right-2'} w-8 h-8 text-snap-pink-dark fill-snap-pink-dark transform ${lang === 'ar' ? '-rotate-12' : 'rotate-12'}`} />
-                  </div>
+                <div className="relative z-10">
+                  <img src="/logo.png" alt="SnapPlus DZ Logo" className="w-24 h-24 object-contain rounded-3xl shadow-xl shadow-snap-pink-dark/20 bg-snap-pink/10" />
                 </div>
                 <div className="relative z-10">
                   <h3 className="text-white font-bold text-2xl mb-2">{t.hero.cardTitle}</h3>
@@ -719,8 +714,7 @@ export default function App() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="flex items-center gap-2">
               <div className="relative">
-                <Ghost className="w-6 h-6 text-snap-black dark:text-white" strokeWidth={2.5} />
-                <Heart className={`absolute -top-1 ${lang === 'ar' ? '-left-1 -rotate-12' : '-right-1 rotate-12'} w-3 h-3 text-snap-pink-dark fill-snap-pink-dark transform`} />
+                <img src="/logo.png" alt="SnapPlus DZ Logo" className="w-8 h-8 object-contain rounded-lg drop-shadow-sm" />
               </div>
               <span className="font-bold text-xl tracking-tight">SnapPlus<span className="text-snap-pink">DZ</span></span>
             </div>
